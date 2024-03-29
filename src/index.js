@@ -1,2 +1,2 @@
-import './styles/styles.css'
+import '../template/style.css'
 import "./app/app.js"

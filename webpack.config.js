@@ -11,7 +11,7 @@ module.exports = (env, { mode }) => ({
     entry: './src/index.js',
     devtool: 'source-map',
     output: {
-        filename: "./index_" + hashCommit + '.js' ,
+        filename: "./index.js" ,
         path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: 'assets/[name][ext]',
         clean: true,
@@ -21,7 +21,7 @@ module.exports = (env, { mode }) => ({
             template: './template/index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: './main_' + hashCommit + '.css',
+            filename: './main.css',
  		}),
         new webpack.DefinePlugin({
             __MODE__: JSON.stringify(mode),
@@ -31,11 +31,11 @@ module.exports = (env, { mode }) => ({
             'cannon': 'cannon',
             'babylonjs-loaders': 'babylonjs-loaders',
         }),
-		new CopyPlugin({
-            patterns: [
-                { from: './src/assets/icon.png', to: 'icon.png' },
-            ],
-        }),
+		// new CopyPlugin({
+        //     patterns: [
+        //         { from: './src/assets/icon.png', to: 'icon.png' },
+        //     ],
+        // }),
     ],
     module: {
         rules: [

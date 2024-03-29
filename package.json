@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tweenjs/tween.js": "^23.1.1"
+    "@tweenjs/tween.js": "^23.1.1",
+    "3d-force-graph": "^0.2.1-d3-force",
+    "three": "^0.163.0"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
